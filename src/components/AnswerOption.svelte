@@ -26,7 +26,7 @@
   <span class="answered-icon">
     {#if correct === true}
       ✓
-    {:else if selected && correct === false}✘{:else}&nbsp;{/if}
+    {:else if selected && correct === false}✕{:else}&nbsp;{/if}
   </span>
   {text}
 </li>

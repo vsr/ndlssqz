@@ -1,41 +1,20 @@
 <script>
   export let name;
   import AnswerOption from "./AnswerOption.svelte";
+  import Question from "./Question.svelte";
+
+  let text = "This is question text";
+  let answers = [
+    { text: "option a" },
+    { text: "eradane option " },
+    { text: "teesara option " },
+    { text: "chaute option " }
+  ];
+  let correctAnswer = answers[2];
 </script>
 
 <style>
-  h1 {
-    color: purple;
-  }
+
 </style>
 
-<h1>Hello {name}!</h1>
-<ul>
-  <AnswerOption
-    text="selected={false} correct={false}"
-    on:click={() => console.log('clicked')}
-    selected={false}
-    correct={false} />
-  <AnswerOption
-    text="selected={false} correct={true}"
-    selected={false}
-    correct={true} />
-  <AnswerOption
-    text="selected={false} correct={null}"
-    selected={false}
-    correct={null} />
-
-  <AnswerOption
-    text="selected={true} correct={false}"
-    selected={true}
-    correct={false} />
-  <AnswerOption
-    text="selected={true} correct={true}"
-    selected={true}
-    correct={true} />
-  <AnswerOption
-    text="selected={true} correct={null}"
-    selected={true}
-    correct={null} />
-
-</ul>
+<Question {text} {answers} {correctAnswer} />

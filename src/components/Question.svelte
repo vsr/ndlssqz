@@ -37,11 +37,13 @@
 
 <style>
   .question {
-    width: 28em;
+    max-width: 28em;
     margin: 0 auto;
+    padding: 0.5em;
   }
   .q-text {
-    font-weight: 600;
+    font-weight: 400;
+    line-height: 1.4em;
   }
   .ans-options {
     padding: 0;

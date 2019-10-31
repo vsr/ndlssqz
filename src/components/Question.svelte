@@ -46,7 +46,7 @@
   .question {
     max-width: 28em;
     margin: 0 auto;
-    padding: 0.5em;
+    padding: 1em;
   }
   .q-text {
     font-weight: 400;

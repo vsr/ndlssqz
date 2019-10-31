@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   export let text;
   export let selected;
   export let correct;
@@ -15,6 +16,7 @@
     padding: 0.5em;
     border: 1px solid #aaa;
     margin: 0.25em;
+    cursor: pointer;
   }
   .answered-icon {
     display: inline-block;
@@ -25,8 +27,10 @@
 <li on:click={() => dispatch('click')}>
   <span class="answered-icon">
     {#if correct === true}
-      ✓
-    {:else if selected && correct === false}✕{:else}&nbsp;{/if}
+      <span transition:fade>✓</span>
+    {:else if selected && correct === false}
+      <span transition:fade>✕</span>
+    {/if}
   </span>
   {text}
 </li>

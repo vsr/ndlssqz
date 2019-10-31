@@ -1,5 +1,7 @@
 <script>
   import { createEventDispatcher, onMount } from "svelte";
+  import { fade } from "svelte/transition";
+
   import Question from "./Question.svelte";
   import { getNewQuestions } from "../questions";
 
@@ -35,11 +37,15 @@
     };
     dispatch("updateScore", { scores });
     isAnswered = true;
-    setTimeout(updateQuestion, 1500);
+    setTimeout(updateQuestion, 2000);
   };
   const updateQuestion = () => {
-    questionIndex = (questionIndex + 1) % questions.length;
-    isAnswered = false;
+    const newQuestionIndex = (questionIndex + 1) % questions.length;
+    questionIndex = null;
+    setTimeout(() => {
+      questionIndex = newQuestionIndex;
+      isAnswered = false;
+    }, 500);
   };
 
   $: text = questionIndex === null ? null : questions[questionIndex].text;
@@ -54,9 +60,13 @@
   $: answered = isAnswered;
 </script>
 
-<Question
-  {text}
-  {answers}
-  {correctAnswer}
-  {answered}
-  on:answered={onAnswered} />
+{#if text}
+  <div transition:fade>
+    <Question
+      {text}
+      {answers}
+      {correctAnswer}
+      {answered}
+      on:answered={onAnswered} />
+  </div>
+{/if}

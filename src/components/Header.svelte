@@ -1,8 +1,5 @@
 <script>
-  export let scores = {
-    correct: 0,
-    total: 0
-  };
+  export let scores;
 </script>
 
 <style>

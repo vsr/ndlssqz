@@ -1,16 +1,21 @@
 <script>
+  import { createEventDispatcher } from "svelte";
   export let text;
-  export let answers;
+  export let answers = [];
   export let correctAnswer;
+  export let answered;
   import AnswerOption from "./AnswerOption.svelte";
 
-  $: answerOptions = answers.map(a => ({
-    selected: false,
-    correct: null,
-    ...a
-  }));
+  $: answerOptions = answers
+    ? answers.map(a => ({
+        selected: false,
+        correct: null,
+        ...a
+      }))
+    : [];
 
-  let answered = false;
+  const dispatch = createEventDispatcher();
+  answered = false;
 
   const onSelection = ans => {
     if (answered) return false;
@@ -23,6 +28,7 @@
       correct = true;
     } else {
       correct = false;
+      // update answerOptions so that we reveal the correct answer to user
       const correctAnswerIndex = answerOptions.findIndex(
         o => o.text === correctAnswer.text
       );
@@ -32,6 +38,7 @@
       };
     }
     answerOptions[answerIndex] = { ...answer, selected, correct };
+    dispatch("answered", { correct });
   };
 </script>
 
@@ -51,10 +58,12 @@
 </style>
 
 <div class="question">
-  <p class="q-text">{text}</p>
-  <ol class="ans-options">
-    {#each answerOptions as answer}
-      <AnswerOption {...answer} on:click={() => onSelection(answer)} />
-    {/each}
-  </ol>
+  {#if text}
+    <p class="q-text">{text}</p>
+    <ol class="ans-options">
+      {#each answerOptions as answer}
+        <AnswerOption {...answer} on:click={() => onSelection(answer)} />
+      {/each}
+    </ol>
+  {/if}
 </div>

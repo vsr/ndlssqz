@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Who invented mobile phone?",
+    "answers": [
+      { "text": "Steve Jobs" },
+      { "text": "Bill Gates" },
+      { "text": "Scott A. Jones" },
+      { "text": "Martin Cooper", "correct": true }
+    ]
+  },
+  {
+    "text": "Who invented Hard disk drive?",
+    "answers": [
+      { "text": "Jerome H. Lemelson" },
+      { "text": "Reynold B. Johnson", "correct": true },
+      { "text": "Scott A. Jones" },
+      { "text": "Walton Musser" }
+    ]
+  },
+  {
+    "text": "Who invented dynamite?",
+    "answers": [
+      { "text": "Ludvig Nobel" },
+      { "text": "Isac Newton" },
+      { "text": "Edison" },
+      { "text": "Alfred Nobel", "correct": true }
+    ]
+  },
+  {
+    "text": "Who invented Tetris?",
+    "answers": [
+      { "text": "Ralph H. Baer " },
+      { "text": "Nikolay Basov" },
+      { "text": "Alexey Pajitnov", "correct": true },
+      { "text": "Jerome H. Lemelson " }
+    ]
+  }
+]

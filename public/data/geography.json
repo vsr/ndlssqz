@@ -1,0 +1,47 @@
+[
+  {
+    "text": "Which is the largest country, by size, in Europe?",
+    "answers": [
+      { "text": "France" },
+      { "text": "Spain" },
+      { "text": "Ukraine" },
+      { "text": "Russia", "correct": true }
+    ]
+  },
+  {
+    "text": "Which is the world's driest desert?",
+    "answers": [
+      { "text": "Atacama", "correct": true },
+      { "text": "Thar" },
+      { "text": "Sahara" },
+      { "text": "Gobi" }
+    ]
+  },
+  {
+    "text": "The largest river in Asia?",
+    "answers": [
+      { "text": "Indus" },
+      { "text": "Ganga" },
+      { "text": "Yangtze", "correct": true },
+      { "text": "Hwang Ho" }
+    ]
+  },
+  {
+    "text": "Which city is popularly known as oil capital of Europe?",
+    "answers": [
+      { "text": "Belfast" },
+      { "text": "Aberdeen", "correct": true },
+      { "text": "Leeds" },
+      { "text": "Liverpool" }
+    ]
+  },
+  {
+    "text": "Which of the following groups of countries share border with Israel?",
+    "answers": [
+      { "text": "Turkey, Syria, Iraq, Yemen" },
+      { "text": "Lebanon, Syria, Turkey, Jordan" },
+      { "text": "Egypt, Turkey, Jordan, Cyprus" },
+      { "text": "Lebanon, Syria, Jordan, Egypt", "correct": true }
+    ]
+  }
+]

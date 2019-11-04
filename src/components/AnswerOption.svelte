@@ -9,11 +9,7 @@
   const dispatch = createEventDispatcher();
 
   $: ansClass =
-    correct === true
-      ? "correct"
-      : selected && correct === false
-      ? "incorrect"
-      : "";
+    correct === true ? "correct" : correct === false ? "incorrect" : "";
 </script>
 
 <style>
@@ -24,7 +20,7 @@
     border: 1px solid #aaa;
     margin: 0.75em 0.25em;
     cursor: pointer;
-    background-color: #fefefe;
+    background-color: #f9f9f9;
     transition: background-color 1s;
     line-height: 1.65em;
   }
@@ -33,10 +29,10 @@
     width: 1em;
   }
   .correct {
-    background-color: lightgreen;
+    background-color: lightskyblue;
   }
   .incorrect {
-    background-color: lightsalmon;
+    background-color: lightgrey;
   }
 </style>
 

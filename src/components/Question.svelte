@@ -38,6 +38,11 @@
       };
     }
     answerOptions[answerIndex] = { ...answer, selected, correct };
+    answerOptions.forEach((o, i) => {
+      if (!o.hasOwnProperty("correct") || o.correct === null) {
+        answerOptions[i] = { ...o, correct: false };
+      }
+    });
     dispatch("answered", { correct });
   };
 </script>
@@ -49,8 +54,9 @@
     padding: 1em;
   }
   .q-text {
-    font-weight: 400;
-    line-height: 1.4em;
+    font-weight: 300;
+    line-height: 1.3em;
+    font-size: 1.4em;
   }
   .ans-options {
     padding: 0;

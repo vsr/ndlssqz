@@ -36,7 +36,11 @@
   }
 </style>
 
-<li on:click={() => dispatch('click')} class={ansClass}>
+<li
+  on:click={() => dispatch('click')}
+  on:keypress={ev => ev.key === 'Enter' && dispatch('click')}
+  class={ansClass}
+  tabindex="0">
   <span class="answered-icon">
     {#if correct === true}
       <span transition:fade>✓</span>

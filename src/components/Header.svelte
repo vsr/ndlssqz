@@ -22,6 +22,8 @@
 </style>
 
 <header>
-  <h1>Endless Quiz</h1>
+  <h1>
+    <a href="/">Endless Quiz</a>
+  </h1>
   <span class="scores">{scores.correct}/{scores.total}</span>
 </header>

@@ -19,9 +19,14 @@
   let correctAnswer;
   let answered;
 
+  const fetchQuestions = async () => {
+    const newQuestions = await getNewQuestions();
+    questions = [...questions, ...newQuestions];
+  };
+
   onMount(async () => {
     try {
-      questions = await getNewQuestions();
+      await fetchQuestions();
       questionIndex = 0;
     } catch (e) {
       console.error("error fetcing questions", e);
@@ -41,6 +46,9 @@
   };
   const updateQuestion = () => {
     const newQuestionIndex = (questionIndex + 1) % questions.length;
+    if (questionIndex + 4 > questions.length) {
+      fetchQuestions();
+    }
     questionIndex = null;
     setTimeout(() => {
       questionIndex = newQuestionIndex;

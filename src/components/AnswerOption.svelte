@@ -43,10 +43,10 @@
   tabindex="0">
   <span class="answered-icon">
     {#if correct === true}
-      <span transition:fade>✓</span>
+      <span>✓</span>
     {:else if selected && correct === false}
-      <span transition:fade>✕</span>
+      <span>✕</span>
     {/if}
   </span>
-  {text}
+  {text} {correct}
 </li>

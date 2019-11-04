@@ -1,0 +1,29 @@
+[
+  {
+    "text": "Which of the following is not a radioactive particle?",
+    "answers": [
+      { "text": "Alpha" },
+      { "text": "Delta", "correct": true },
+      { "text": "Beta" },
+      { "text": "Gamma" }
+    ]
+  },
+  {
+    "text": "What's Newton's First law of Motion also known as",
+    "answers": [
+      { "text": "Constancy Principle" },
+      { "text": "Causality Principle" },
+      { "text": "Principle of Inertia", "correct": true },
+      { "text": "Principle of Relativity" }
+    ]
+  },
+  {
+    "text": "A vector is a physical quantity which has",
+    "answers": [
+      { "text": "Mass and volume" },
+      { "text": "Magnitude and direction", "correct": true },
+      { "text": "Density and tension" },
+      { "text": "Inertia and stress" }
+    ]
+  }
+]

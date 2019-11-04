@@ -7,11 +7,19 @@ const questionFiles = [
 ];
 let qFiles = [];
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 const randomQuestionFile = () => {
   if (qFiles.length === 0) {
     qFiles = [...questionFiles];
+    shuffleArray(qFiles);
   }
-  return qFiles.splice(Math.floor(Math.random() * qFiles.length), 1)[0];
+  return qFiles.pop();
 };
 
 export const getNewQuestions = () => {
@@ -19,6 +27,8 @@ export const getNewQuestions = () => {
     sendRequest(randomQuestionFile(), (err, req) => {
       if (err) return reject(err);
       const questions = JSON.parse(req.responseText);
+      questions.forEach(q => shuffleArray(q.answers));
+      shuffleArray(questions);
       resolve(questions);
     });
   });

@@ -7,17 +7,28 @@
     max-width: 28rem;
     margin: 0 auto;
     padding: 0.25em;
-    background: #eee;
     display: flex;
+    text-indent: 0.5em;
   }
   h1 {
     font-size: 1em;
     flex: 2 1;
+    margin: 0.5em;
+    font-weight: 900;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.9;
   }
   .scores {
+    font-size: 1em;
     flex: 1 1;
     text-align: right;
-    line-height: 2em;
+    margin: 0.5em;
+    font-weight: 900;
+    color: #888;
   }
 </style>
 

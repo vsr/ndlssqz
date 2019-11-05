@@ -57,6 +57,7 @@
     font-weight: 300;
     line-height: 1.3em;
     font-size: 1.4em;
+    margin-top: 0.25em;
   }
   .ans-options {
     padding: 0;

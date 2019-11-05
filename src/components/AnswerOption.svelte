@@ -17,12 +17,17 @@
     list-style-type: none;
     border-radius: 0.5em;
     padding: 0.5em;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     margin: 0.75em 0.25em;
     cursor: pointer;
-    background-color: #f9f9f9;
-    transition: background-color 1s;
+
+    transition: background-color, transform 0.7s;
     line-height: 1.65em;
+    background-color: #f9f9f9;
+  }
+  li:focus {
+    outline: none;
+    border-color: #222;
   }
   .answered-icon {
     display: inline-block;
@@ -30,9 +35,11 @@
   }
   .correct {
     background-color: lightskyblue;
+    transform: scale(1.05);
   }
   .incorrect {
-    background-color: lightgrey;
+    background-color: #dedede;
+    transform: scale(0.95);
   }
 </style>
 
@@ -48,5 +55,5 @@
       <span>✕</span>
     {/if}
   </span>
-  {text} {correct}
+  {text}
 </li>

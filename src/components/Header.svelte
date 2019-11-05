@@ -19,6 +19,11 @@
   a {
     text-decoration: none;
   }
+  a,
+  a:visited,
+  a:focus {
+    color: #3f51b5;
+  }
   a:hover {
     opacity: 0.9;
   }

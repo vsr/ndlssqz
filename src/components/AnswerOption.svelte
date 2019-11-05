@@ -27,7 +27,7 @@
   }
   li:focus {
     outline: none;
-    border-color: #222;
+    border-color: #999;
   }
   .answered-icon {
     display: inline-block;
